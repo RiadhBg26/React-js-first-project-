@@ -15,14 +15,15 @@ import Stylesheets from './components/stylesheets';
 import Inline from './components/inline';
 import './appStyles.css'
 import styles from './appStyles.module.css'
+import Form from './components/form';
 
 
 
 function App() {
   return (
     <div className="App">
-			<h1 className="error">Error</h1>
-			<h1 className={styles.success}>Success</h1>
+			{/* <h1 className="error">Error</h1> */}
+			{/* <h1 className={styles.success}>Success</h1> */}
       {/* <Greet /> */} 
       {/* <Greet name="Riadh" heroName="batman">
         <p>This is children props</p>
@@ -43,7 +44,8 @@ function App() {
       {/* <UserGreeting></UserGreeting> */}
       {/* <NameList></NameList> */}
       {/* <Stylesheets primary = {true}></Stylesheets> */}
-      <Inline></Inline>
+      {/* <Inline></Inline> */}
+			<Form></Form>
     </div>
   );
 }
