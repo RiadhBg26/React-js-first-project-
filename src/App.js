@@ -1,23 +1,49 @@
 import logo from './logo.svg';
 import './App.css';
+import Greet from './components/greeting';
+// import {Greet} from './components/greeting'; // importing an es6 arrow funtion should be like this
+import Welcome from './components/welcome';
+import Message from './components/message';
+import Counter from './components/counter';
+import FunctionClick from './components/functionClick';
+import ClassClick from './components/classClick';
+import EventBind from './components/eventBind';
+import ParentComponent from './components/parentComponent';
+import UserGreeting from './components/userGreeting';
+import NameList from './components/nameList';
+import Stylesheets from './components/stylesheets';
+import Inline from './components/inline';
+import './appStyles.css'
+import styles from './appStyles.module.css'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+			<h1 className="error">Error</h1>
+			<h1 className={styles.success}>Success</h1>
+      {/* <Greet /> */} 
+      {/* <Greet name="Riadh" heroName="batman">
+        <p>This is children props</p>
+      </Greet> */}
+      {/* <Greet name="fakhri" heroName="superman">
+        <button>Action</button>
+      </Greet> */}
+      {/* <Greet name="mehdi" heroName="wonder woman"></Greet> */}
+      {/* <Welcome name="Riadh" job="angular dev"></Welcome> */}
+      {/* <Welcome name="Fakhri" job="flutter dev"></Welcome> */}
+      {/* <Welcome name="mehdi" job="nodejs dev"></Welcome> */}
+      {/* <Message name="mehdi" job="nodejs dev"></Message> */}
+      {/* <Counter addValue="4"></Counter> */}
+      {/* <FunctionClick /> */}
+      {/* <ClassClick></ClassClick> */}
+      {/* <EventBind></EventBind> */}
+      {/* <ParentComponent></ParentComponent> */}
+      {/* <UserGreeting></UserGreeting> */}
+      {/* <NameList></NameList> */}
+      {/* <Stylesheets primary = {true}></Stylesheets> */}
+      <Inline></Inline>
     </div>
   );
 }
