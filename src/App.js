@@ -18,6 +18,8 @@ import styles from './appStyles.module.css'
 import Form from './components/form';
 import LifecycleA from './components/lifecycleA';
 import LifecycleB from './components/lifecycleB';
+import FragmentDemo from './components/fragmentDemo';
+import Table from './components/table';
 
 
 
@@ -48,8 +50,10 @@ function App() {
       {/* <Stylesheets primary = {true}></Stylesheets> */}
       {/* <Inline></Inline> */}
 			{/* <Form></Form> */}
-			<LifecycleA></LifecycleA>
+			{/* <LifecycleA></LifecycleA> */}
 			{/* <LifecycleB></LifecycleB> */}
+			{/* <FragmentDemo></FragmentDemo> */}
+			<Table></Table>
     </div>
   );
 }
