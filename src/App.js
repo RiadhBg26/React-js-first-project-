@@ -22,6 +22,7 @@ import FragmentDemo from './components/fragmentDemo';
 import Table from './components/table';
 import PureComp from './components/pureComponent';
 import FatherComponent from './components/fatherComponent';
+import RefsDemo from './components/refsDemo';
 
 
 
@@ -57,7 +58,8 @@ function App() {
 			{/* <FragmentDemo></FragmentDemo> */}
 			{/* <Table></Table> */}
 			{/* <PureComp></PureComp> */}
-			<FatherComponent></FatherComponent>
+			{/* <FatherComponent></FatherComponent> */}
+			<RefsDemo></RefsDemo>
 		</div>
   );
 }
