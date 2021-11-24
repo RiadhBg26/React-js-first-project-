@@ -25,35 +25,37 @@ import FatherComponent from './components/fatherComponent';
 import RefsDemo from './components/refsDemo';
 import FocusInput from './components/focusInput';
 import FRParentInput from './components/FRParentInput';
+import Hero from './components/hero';
+import ErrorBoundary from './components/boundary';
 
 
 
 function App() {
-  return (
-    <div className="App">
+	return (
+		<div className="App">
 			{/* <h1 className="error">Error</h1> */}
 			{/* <h1 className={styles.success}>Success</h1> */}
-      {/* <Greet /> */} 
-      {/* <Greet name="Riadh" heroName="batman">
+			{/* <Greet /> */}
+			{/* <Greet name="Riadh" heroName="batman">
         <p>This is children props</p>
       </Greet> */}
-      {/* <Greet name="fakhri" heroName="superman">
+			{/* <Greet name="fakhri" heroName="superman">
         <button>Action</button>
       </Greet> */}
-      {/* <Greet name="mehdi" heroName="wonder woman"></Greet> */}
-      {/* <Welcome name="Riadh" job="angular dev"></Welcome> */}
-      {/* <Welcome name="Fakhri" job="flutter dev"></Welcome> */}
-      {/* <Welcome name="mehdi" job="nodejs dev"></Welcome> */}
-      {/* <Message name="mehdi" job="nodejs dev"></Message> */}
-      {/* <Counter addValue="4"></Counter> */}
-      {/* <FunctionClick /> */}
-      {/* <ClassClick></ClassClick> */}
-      {/* <EventBind></EventBind> */}
-      {/* <ParentComponent></ParentComponent> */}
-      {/* <UserGreeting></UserGreeting> */}
-      {/* <NameList></NameList> */}
-      {/* <Stylesheets primary = {true}></Stylesheets> */}
-      {/* <Inline></Inline> */}
+			{/* <Greet name="mehdi" heroName="wonder woman"></Greet> */}
+			{/* <Welcome name="Riadh" job="angular dev"></Welcome> */}
+			{/* <Welcome name="Fakhri" job="flutter dev"></Welcome> */}
+			{/* <Welcome name="mehdi" job="nodejs dev"></Welcome> */}
+			{/* <Message name="mehdi" job="nodejs dev"></Message> */}
+			{/* <Counter addValue="4"></Counter> */}
+			{/* <FunctionClick /> */}
+			{/* <ClassClick></ClassClick> */}
+			{/* <EventBind></EventBind> */}
+			{/* <ParentComponent></ParentComponent> */}
+			{/* <UserGreeting></UserGreeting> */}
+			{/* <NameList></NameList> */}
+			{/* <Stylesheets primary = {true}></Stylesheets> */}
+			{/* <Inline></Inline> */}
 			{/* <Form></Form> */}
 			{/* <LifecycleA></LifecycleA> */}
 			{/* <LifecycleB></LifecycleB> */}
@@ -63,9 +65,27 @@ function App() {
 			{/* <FatherComponent></FatherComponent> */}
 			{/* <RefsDemo></RefsDemo> */}
 			{/* <FocusInput ></FocusInput> */}
-			<FRParentInput ></FRParentInput>
+			{/* <FRParentInput ></FRParentInput> */}
+
+			{/* all the components will be hidden and  covered with the Boundary component in case of error in one of them, and this is not ideal */}
+			{/* <ErrorBoundary>
+				<Hero heroName="Batman"></Hero>
+				<Hero heroName="Superman"></Hero>
+				<Hero heroName="Joker"></Hero>
+			</ErrorBoundary> */}
+
+			{/* the ideal is to encounter each component with the ErrorBoundary component to mask only the one with the error in case of error */}
+			<ErrorBoundary>
+				<Hero heroName="Batman"></Hero>
+			</ErrorBoundary>
+			<ErrorBoundary>
+				<Hero heroName="Superman"></Hero>
+			</ErrorBoundary>
+			<ErrorBoundary>
+				<Hero heroName="Joker"></Hero>
+			</ErrorBoundary>
 		</div>
-  );
+	);
 }
 
 export default App;
