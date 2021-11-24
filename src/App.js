@@ -24,6 +24,7 @@ import PureComp from './components/pureComponent';
 import FatherComponent from './components/fatherComponent';
 import RefsDemo from './components/refsDemo';
 import FocusInput from './components/focusInput';
+import FRParentInput from './components/FRParentInput';
 
 
 
@@ -61,7 +62,8 @@ function App() {
 			{/* <PureComp></PureComp> */}
 			{/* <FatherComponent></FatherComponent> */}
 			{/* <RefsDemo></RefsDemo> */}
-			<FocusInput ></FocusInput>
+			{/* <FocusInput ></FocusInput> */}
+			<FRParentInput ></FRParentInput>
 		</div>
   );
 }
