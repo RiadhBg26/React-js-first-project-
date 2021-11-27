@@ -27,6 +27,8 @@ import FocusInput from './components/focusInput';
 import FRParentInput from './components/FRParentInput';
 import Hero from './components/hero';
 import ErrorBoundary from './components/boundary';
+import ClickCounter from './components/clickCounter';
+import HoverCounter from './components/hoverCounter';
 
 
 
@@ -75,7 +77,7 @@ function App() {
 			</ErrorBoundary> */}
 
 			{/* the ideal is to encounter each component with the ErrorBoundary component to mask only the one with the error in case of error */}
-			<ErrorBoundary>
+			{/* <ErrorBoundary>
 				<Hero heroName="Batman"></Hero>
 			</ErrorBoundary>
 			<ErrorBoundary>
@@ -83,7 +85,11 @@ function App() {
 			</ErrorBoundary>
 			<ErrorBoundary>
 				<Hero heroName="Joker"></Hero>
-			</ErrorBoundary>
+			</ErrorBoundary> */}
+
+			{/* the props (name) will pass to the HOC (withCounter.js) and not to the wrapped components */}
+			<ClickCounter name="Riadh Bg"></ClickCounter>
+			<HoverCounter name="Riadh Bougamra"></HoverCounter>
 		</div>
 	);
 }
