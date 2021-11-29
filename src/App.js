@@ -32,6 +32,7 @@ import HoverCounter from './components/hoverCounter';
 import ClickCounter2 from './components/clickCounter2';
 import HoverCounter2 from './components/hoverCounter2';
 import User from './components/user';
+import CounterRenderer from './components/counterRenderer';
 
 
 
@@ -94,11 +95,39 @@ function App() {
 			{/* <ClickCounter name="Riadh Bg"></ClickCounter>
 			<HoverCounter name="Riadh Bougamra"></HoverCounter> */}
 
-			<ClickCounter2></ClickCounter2>
-			<HoverCounter2></HoverCounter2>
+			{/* <ClickCounter2></ClickCounter2>
+			<HoverCounter2></HoverCounter2> */}
 			{/* we can pass props as a function */}
 			{/* Render props is a technique for sharing code between React components using props whose value is a function */}
-			<User render={(isLoggedIn) => isLoggedIn ? "Riadh bg": 'anonymous user'}/>
+			{/* <User render={(isLoggedIn) => isLoggedIn ? "Riadh bg": 'anonymous user'}/> */}
+
+			{/* first way to use renderer */}
+			{/* <CounterRenderer render={(count, incrementCount) => 
+				// ClickCounter2 component is passed as props
+				<ClickCounter2 count={count} incrementCount={incrementCount}>
+				</ClickCounter2>}>
+			</CounterRenderer>
+
+			<CounterRenderer render={(count, incrementCount) => 
+				// HoverCounter2 component is passed as props
+				<HoverCounter2 count={count} incrementCount={incrementCount}>
+				</HoverCounter2>}>
+			</CounterRenderer> */}
+
+			{/* second way to use renderer */}
+			<CounterRenderer >{(count, incrementCount) => 
+				// anything passed within the component's opening and closing tag is considered as children props  
+				// ClickCounter2 component is passed as props
+				<ClickCounter2 count={count} incrementCount={incrementCount}>
+				</ClickCounter2>}
+			</CounterRenderer>
+
+			<CounterRenderer >{(count, incrementCount) => 
+				// HoverCounter2 component is passed as props
+				<HoverCounter2 count={count} incrementCount={incrementCount}>
+				</HoverCounter2>}
+			</CounterRenderer>
+
 		</div>
 	);
 }
