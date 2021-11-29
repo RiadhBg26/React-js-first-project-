@@ -29,6 +29,9 @@ import Hero from './components/hero';
 import ErrorBoundary from './components/boundary';
 import ClickCounter from './components/clickCounter';
 import HoverCounter from './components/hoverCounter';
+import ClickCounter2 from './components/clickCounter2';
+import HoverCounter2 from './components/hoverCounter2';
+import User from './components/user';
 
 
 
@@ -88,8 +91,14 @@ function App() {
 			</ErrorBoundary> */}
 
 			{/* the props (name) will pass to the HOC (withCounter.js) and not to the wrapped components */}
-			<ClickCounter name="Riadh Bg"></ClickCounter>
-			<HoverCounter name="Riadh Bougamra"></HoverCounter>
+			{/* <ClickCounter name="Riadh Bg"></ClickCounter>
+			<HoverCounter name="Riadh Bougamra"></HoverCounter> */}
+
+			<ClickCounter2></ClickCounter2>
+			<HoverCounter2></HoverCounter2>
+			{/* we can pass props as a function */}
+			{/* Render props is a technique for sharing code between React components using props whose value is a function */}
+			<User render={(isLoggedIn) => isLoggedIn ? "Riadh bg": 'anonymous user'}/>
 		</div>
 	);
 }
