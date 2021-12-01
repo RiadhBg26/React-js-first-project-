@@ -33,6 +33,8 @@ import ClickCounter2 from './components/clickCounter2';
 import HoverCounter2 from './components/hoverCounter2';
 import User from './components/user';
 import CounterRenderer from './components/counterRenderer';
+import ComponentA from './components/componentA';
+import { UserProvider } from './components/userContext';
 
 
 
@@ -115,18 +117,25 @@ function App() {
 			</CounterRenderer> */}
 
 			{/* second way to use renderer */}
-			<CounterRenderer >{(count, incrementCount) => 
+			{/* <CounterRenderer >{(count, incrementCount) => 
 				// anything passed within the component's opening and closing tag is considered as children props  
 				// ClickCounter2 component is passed as props
 				<ClickCounter2 count={count} incrementCount={incrementCount}>
 				</ClickCounter2>}
-			</CounterRenderer>
+			</CounterRenderer> */}
 
-			<CounterRenderer >{(count, incrementCount) => 
+			{/* <CounterRenderer >{(count, incrementCount) => 
 				// HoverCounter2 component is passed as props
 				<HoverCounter2 count={count} incrementCount={incrementCount}>
 				</HoverCounter2>}
-			</CounterRenderer>
+			</CounterRenderer> */}
+
+			{/* Context demo */}
+
+			<UserProvider value="Riadh Bg">
+				<ComponentA />
+			</UserProvider>
+
 
 		</div>
 	);
