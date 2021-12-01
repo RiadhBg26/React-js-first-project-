@@ -131,10 +131,10 @@ function App() {
 			</CounterRenderer> */}
 
 			{/* Context demo */}
-
-			<UserProvider value="Riadh Bg">
+			{/* when default context value is passed UserProvider is no longer necessary */}
+			{/* <UserProvider value="Riadh Bg"> */}
 				<ComponentA />
-			</UserProvider>
+			{/* </UserProvider> */}
 
 
 		</div>

@@ -1,8 +1,13 @@
 import React from "react";
 
-const userContext = React.createContext();
+// default value can be added to context as here 'Riadh Bg'
+const UserContext = React.createContext('Riadh Bg');
 
-const UserProvider = userContext.Provider;
-const UserConsumer = userContext.Consumer;
+const UserProvider = UserContext.Provider;
+const UserConsumer = UserContext.Consumer;
 
-export {UserProvider, UserConsumer}
+// for the first way to use context
+export {UserProvider, UserConsumer};
+
+// for the second way to use context
+export default UserContext
